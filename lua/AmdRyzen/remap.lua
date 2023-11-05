@@ -26,10 +26,10 @@ keymap("i", "kj", "<ESC>")
 
 keymap("n", "Q", "<nop>")
 
-keymap("n", "<C-h>", "<C-w>h")
-keymap("n", "<C-j>", "<C-w>j")
-keymap("n", "<C-k>", "<C-w>k")
-keymap("n", "<C-l>", "<C-w>l")
+keymap("n", "<C-h>", "<cmd> TmuxNavigateLeft<cr>")
+keymap("n", "<C-j>", "<cmd> TmuxNavigateDown<cr>")
+keymap("n", "<C-k>", "<cmd> TmuxNavigateUp<cr>")
+keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>")
 
 keymap("n", "<S-l>", ":bnext<CR>")
 keymap("n", "<S-h>", ":bprevious<CR>")
