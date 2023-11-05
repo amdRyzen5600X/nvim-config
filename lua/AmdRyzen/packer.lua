@@ -54,5 +54,6 @@ return require('packer').startup(function(use)
     use ( "lewis6991/impatient.nvim" )
     use ( "lukas-reineke/indent-blankline.nvim" )
     use ( "christoomey/vim-tmux-navigator" )
+    use ( 'ThePrimeagen/vim-be-good' )
 
 end)

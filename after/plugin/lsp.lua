@@ -18,13 +18,13 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
 	ensure_installed = {
+        'html',
         'tsserver',
         'pyright',
         'lua_ls',
         'jdtls',
         'asm_lsp',
         'cssls',
-        'html',
         'sqlls',
         'clangd',
     },
