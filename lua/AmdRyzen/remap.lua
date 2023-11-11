@@ -39,7 +39,7 @@ keymap("v", ">", ">gv^")
 
 keymap("n", "<leader>w", "<cmd>w!<cr>")
 keymap("n", "<leader>q", "<cmd>q!<cr>")
-keymap("n", "<leader>c", "<cmd>bdelete<CR>")
+keymap("n", "<leader>c", "<cmd>Bdelete<CR>")
 keymap("n", "<leader>ps", "<cmd>PackerSync<cr>")
 keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>")
 keymap("n", "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>")
