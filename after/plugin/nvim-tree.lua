@@ -4,6 +4,9 @@ if not status_ok then
 end
 
 nvim_tree.setup {
+    filters = {
+        dotfiles = true,
+    },
     update_focused_file = {
         enable = true,
         update_cwd = true,
@@ -47,7 +50,7 @@ nvim_tree.setup {
         },
     },
     view = {
-        width = 30,
+        width = 25,
         side = "left",
     },
 }

@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 keymap("n", "<leader>pv", vim.cmd.Ex)
 
 keymap("v", "J", ":m '>+1<CR>gv=gv")
-keymap("v", "K", ":m '>-2<CR>gv=gv")
+keymap("v", "K", ":m '<-2<CR>gv=gv")
 
 keymap("n", "J", "mzJ`z")
 keymap("n", "<C-d>", "<C-d>zz")
@@ -42,4 +42,3 @@ keymap("n", "<leader>q", "<cmd>q!<cr>")
 keymap("n", "<leader>c", "<cmd>Bdelete<CR>")
 keymap("n", "<leader>ps", "<cmd>PackerSync<cr>")
 keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>")
-keymap("n", "<leader>th", "<cmd>ToggleTerm size=10 direction=horizontal<cr>")
