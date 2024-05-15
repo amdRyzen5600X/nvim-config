@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
 	use( 'nvim-lua/plenary.nvim' )
 	use( 'ThePrimeagen/harpoon' )
 	use( 'mbbill/undotree' )
+    use( "akinsho/toggleterm.nvim" )
 	use( 'tpope/vim-fugitive' )
     use( 'mfussenegger/nvim-lint' )
 
@@ -44,7 +45,6 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
-    use ( "akinsho/toggleterm.nvim" )
     use ( "windwp/nvim-autopairs" )
     use ( "numToStr/Comment.nvim" )
     use ( "JoosepAlviste/nvim-ts-context-commentstring" )
@@ -55,5 +55,6 @@ return require('packer').startup(function(use)
     use ( "lukas-reineke/indent-blankline.nvim" )
     use ( "christoomey/vim-tmux-navigator" )
     use ( 'ThePrimeagen/vim-be-good' )
+    use ( 'echasnovski/mini.nvim' )
 
 end)
