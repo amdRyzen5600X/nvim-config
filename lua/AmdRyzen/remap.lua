@@ -27,8 +27,6 @@ keymap("i", "kj", "<ESC>")
 keymap("n", "Q", "<nop>")
 
 keymap("n", "<C-h>", "<cmd> TmuxNavigateLeft<cr>")
-keymap("n", "<C-j>", "<cmd> TmuxNavigateDown<cr>")
-keymap("n", "<C-k>", "<cmd> TmuxNavigateUp<cr>")
 keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>")
 
 keymap("v", "<", "<gv^")
@@ -38,3 +36,4 @@ keymap("n", "<leader>w", "<cmd>w!<cr>")
 keymap("n", "<leader>q", "<cmd>q!<cr>")
 keymap("n", "<leader>c", "<cmd>Bdelete<CR>")
 keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>")
+
