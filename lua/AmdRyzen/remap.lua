@@ -32,8 +32,11 @@ keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>")
 keymap("v", "<", "<gv^")
 keymap("v", ">", ">gv^")
 
-keymap("n", "<leader>w", "<cmd>w!<cr>")
+keymap({ 'n', 'x' }, '<leader>w', function()
+    vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
+    vim.cmd { cmd = 'write', bang = true }
+end)
+
 keymap("n", "<leader>q", "<cmd>q!<cr>")
 keymap("n", "<leader>c", "<cmd>Bdelete<CR>")
 keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>")
-
