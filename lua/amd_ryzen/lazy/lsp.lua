@@ -40,6 +40,21 @@ return {
                         capabilities = capabilities
                     }
                 end,
+                ["rust_analyzer"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.rust_analyzer.setup {
+                        capabilities = capabilities,
+                        settings = {
+                            procMacro = {
+                                ignored = {
+                                    leptos_macro = {
+                                        "server",
+                                    }
+                                }
+                            }
+                        }
+                    }
+                end,
 
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
