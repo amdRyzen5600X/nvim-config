@@ -3,7 +3,7 @@ return {
     config = function()
         vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
-        local ThePrimeagen_Fugitive = vim.api.nvim_create_augroup("amd_ryzen_fugitive", {})
+        local amd_ryzen_fugitive = vim.api.nvim_create_augroup("amd_ryzen_fugitive", {})
 
         local autocmd = vim.api.nvim_create_autocmd
         autocmd("BufWinEnter", {
