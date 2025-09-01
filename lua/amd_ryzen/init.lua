@@ -29,12 +29,25 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = amd_ryzenGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
 
+vim.api.nvim_create_augroup("AutoFormat", {})
+
+vim.api.nvim_create_autocmd(
+    "BufWritePost",
+    {
+        pattern = "*.py",
+        group = "AutoFormat",
+        callback = function()
+            vim.cmd("silent !ruff --quiet format %")
+            vim.cmd("edit")
+        end,
+    }
+)
 
 autocmd('LspAttach', {
     group = amd_ryzenGroup,

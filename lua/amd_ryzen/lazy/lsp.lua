@@ -15,6 +15,7 @@ return {
     },
 
     config = function()
+        require('lspconfig').gleam.setup({})
         require("conform").setup({
             formatters_by_ft = {
             }
@@ -55,6 +56,27 @@ return {
                         }
                     }
                 end,
+                ["ts_ls"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.ts_ls.setup {
+                        init_options = {
+                            plugins = {
+                                {
+                                    name = '@vue/typescript-plugin',
+                                    location = '/home/amd_ryzen/.local/share/nvim/mason/bin/vue-language-server',
+                                    languages = { 'vue' },
+                                },
+                            },
+                        },
+                    }
+                    lspconfig.volar.setup {
+                        init_options = {
+                            vue = {
+                                hybridMode = false,
+                            },
+                        },
+                    }
+                end,
 
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
@@ -91,8 +113,8 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
             }, {
-                { name = 'buffer' },
-            })
+                    { name = 'buffer' },
+                })
         })
 
         vim.diagnostic.config({
